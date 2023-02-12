@@ -39,32 +39,48 @@ $success: $green;
 $info: $cyan;
 $warning: $yellow;
 $danger: $red;
-$light: $gray-100;
 $dark: $gray-900;
 
 // Light Theme
 :root {
-	--color-light: #{$color-lt-light};
-	--color-bg-light: #{$color-lt-bg-light};
-	--color-accent: #{$color-lt-accent};
-	--color-medium: #{$color-lt-medium};
-	--color-base: #{$color-lt-base};
-
 	--color-primary: #{$primary};
 	--color-secondary: #{$secondary};
 	--color-success: #{$success};
 	--color-info: #{$info};
 	--color-warning: #{$warning};
 	--color-danger: #{$danger};
-	--color-light: #{$light};
+	--color-white: #{$white};
 	--color-dark: #{$dark};
-}
 
-// Dark Theme
-:root[data-theme='dark'] {
-	--color-light: #{$color-dt-light};
-	--color-bg-light: #{$color-dt-bg-light};
-	--color-accent: #{$color-dt-accent};
-	--color-medium: #{$color-dt-medium};
-	--color-base: #{$color-dt-base};
+    --panel-title-height: 2.5rem;
+
+	--color-light: #{$color-lt-light};
+	--color-bg-light: #{$color-lt-bg-light};
+	--color-accent: #{$color-lt-accent};
+	--color-medium: #{$color-lt-medium};
+	--color-base: #{$color-lt-base};
+
+	&[data-theme='light'] {
+		--color-light: #{$color-lt-light};
+		--color-bg-light: #{$color-lt-bg-light};
+		--color-accent: #{$color-lt-accent};
+		--color-medium: #{$color-lt-medium};
+		--color-base: #{$color-lt-base};
+	}
+
+	&[data-theme='dark'] {
+		--color-light: #{$color-dt-light};
+		--color-bg-light: #{$color-dt-bg-light};
+		--color-accent: #{$color-dt-accent};
+		--color-medium: #{$color-dt-medium};
+		--color-base: #{$color-dt-base};
+	}
+
+	@media (prefers-color-scheme: dark) {
+		--color-light: #{$color-dt-light};
+		--color-bg-light: #{$color-dt-bg-light};
+		--color-accent: #{$color-dt-accent};
+		--color-medium: #{$color-dt-medium};
+		--color-base: #{$color-dt-base};
+	}
 }

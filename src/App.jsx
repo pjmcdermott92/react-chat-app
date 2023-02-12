@@ -1,5 +1,10 @@
+import { Routes, Route } from 'react-router-dom';
+import AppLayout from './components/App/AppLayout/AppLayout';
+
 const App = () => {
-	return <h1>Hello!</h1>;
+	return (
+		<AppLayout />
+	);
 };
 
 export default App;

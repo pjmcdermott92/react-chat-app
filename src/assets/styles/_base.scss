@@ -5,6 +5,8 @@
 }
 
 body {
+    position: relative;
+    width: 100vh;
     font: {
         family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         size: 16px;
@@ -12,4 +14,5 @@ body {
     line-height: 1.1;
     background-color: var(--color-bg-light);
     color: var(--color-base);
+    overflow: hidden;
 }

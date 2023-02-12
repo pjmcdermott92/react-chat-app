@@ -1,0 +1,99 @@
+.app-navigator {
+	position: relative;
+	display: flex;
+	align-items: stretch;
+	width: 100%;
+	max-width: 320px;
+	height: 100vh;
+	background-color: var(--color-accent);
+
+	.mode-ribbon {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 60px;
+		padding: 2rem 0 1rem;
+		background-color: var(--color-medium);
+
+		&__nav {
+			list-style: none;
+			padding-left: 1rem;
+
+			li {
+				position: relative;
+				margin: 0.5rem 0;
+				border-top-left-radius: 25px;
+				border-bottom-left-radius: 25px;
+
+				&.active {
+					background-color: var(--color-accent);
+				}
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				margin: auto;
+				font-size: 1.5rem;
+				border-radius: 50%;
+				cursor: pointer;
+				transition: 250ms ease-in-out;
+
+				&:hover {
+					background-color: var(--color-accent);
+
+                    & + .item-tooltip {
+                        display: block;
+                    }
+				}
+			}
+
+		}
+	}
+
+    .item-tooltip {
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        display: none;
+        width: max-content;
+        margin-left: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        border-radius: 10px;
+        box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.15);
+        transform: translateY(-50%);
+    
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-right: 5px solid var(--color-dark);
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.list-pane {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.current-user-info {
+    height: 4rem;
+    padding: 1rem;
+    margin-top: auto;
+    background-color: rgba(0,0,0,0.25);
+}
