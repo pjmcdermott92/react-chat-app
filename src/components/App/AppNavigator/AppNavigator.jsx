@@ -4,6 +4,8 @@ import {
 	IoSettings,
 	IoPowerSharp,
 } from 'react-icons/io5';
+import ChannelList from '../ChannelList/ChannelList';
+import Member from '../Member/Member';
 import './AppNavigator.scss';
 
 const AppNavigator = () => {
@@ -11,7 +13,7 @@ const AppNavigator = () => {
 		<aside className='app-navigator'>
 			<nav className='mode-ribbon'>
 				<ul className='mode-ribbon__nav'>
-					<li className='active'>
+					<li>
 						<a>
 							<span>
 								<IoFileTrayFullSharp />
@@ -19,7 +21,7 @@ const AppNavigator = () => {
 						</a>
 						<span className='item-tooltip'>Direct Messages</span>
 					</li>
-					<li>
+					<li  className='active'>
 						<a>
 							<span>
 								<IoChatbubblesSharp />
@@ -48,8 +50,11 @@ const AppNavigator = () => {
 				</ul>
 			</nav>
             <div className='list-pane'>
+				<div>
+					<ChannelList />
+				</div>
                 <div className='current-user-info'>
-                    nn
+                    <Member user={{ name: 'John Doe' }} />
                 </div>
             </div>
 		</aside>

@@ -1,0 +1,19 @@
+.member-item-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: .25rem 0;
+    padding: .25rem;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    border-radius: 10px;
+
+    &:hover, &.selected {
+        background-color:  rgba(255,255,255,0.25);
+    }
+
+    &__name {
+        margin-left: .75rem;
+        opacity: .65;
+    }
+}

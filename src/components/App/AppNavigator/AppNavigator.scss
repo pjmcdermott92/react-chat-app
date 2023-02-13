@@ -4,8 +4,9 @@
 	align-items: stretch;
 	width: 100%;
 	max-width: 320px;
-	height: 100vh;
+	height: 100%;
 	background-color: var(--color-accent);
+	user-select: none;
 
 	.mode-ribbon {
 		display: flex;
@@ -68,6 +69,7 @@
         border-radius: 10px;
         box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.15);
         transform: translateY(-50%);
+		z-index: 50;
     
         &::before {
             content: '';
@@ -89,11 +91,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+	& > div:first-child {
+		height: calc(100% - 4rem);
+	}
 }
 
 .current-user-info {
+	display: flex;
+	align-items: center;
     height: 4rem;
-    padding: 1rem;
+	padding: .25rem;
     margin-top: auto;
     background-color: rgba(0,0,0,0.25);
 }

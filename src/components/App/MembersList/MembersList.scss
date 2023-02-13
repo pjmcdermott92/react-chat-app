@@ -1,0 +1,14 @@
+.members-panel {
+    width: 100%;
+    max-width: 280px;
+    height: 100%;
+    margin-left: auto;
+	background-color: var(--color-accent);
+	user-select: none;
+    overflow: hidden;
+    
+    .users-list {
+        height: 100vh;
+        overflow-y: auto;
+    }
+}

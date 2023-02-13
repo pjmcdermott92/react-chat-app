@@ -1,18 +1,36 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+	width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 10px;
+}
+
+*:hover::-webkit-scrollbar {
+    display: initial;
 }
 
 body {
-    position: relative;
-    width: 100vh;
-    font: {
-        family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        size: 16px;
-    }
-    line-height: 1.1;
-    background-color: var(--color-bg-light);
-    color: var(--color-base);
-    overflow: hidden;
+	position: relative;
+	font: {
+		family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		size: 16px;
+	}
+	line-height: 1.1;
+	background-color: var(--color-bg-light);
+	color: var(--color-base);
 }
